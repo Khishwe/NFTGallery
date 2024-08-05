@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khishwe</title>
+    <link rel="stylesheet" href="HomeStyles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>NFT Gallery</h1>
+            <input type="text" id="image-number" class="image-number-input" placeholder="Cerca" oninput="goToImage()">
+        </div>
+        <div class="container">
+            <div class="arrow" onclick="previousContent()">&#x276E;</div>
+            <div class="iframe-container">
+                <div class="number" id="iframe-number">1</div>
+                <div class="iframe-box" id="iframe-box" >
+                </div>
+            </div>
+            <div class="arrow" onclick="nextContent()">&#x276F;</div>
+        </div>
+        <div class="footer">
+            <p><!--&copy;--> 2024 Khishwe</p>
+        </div>
+    </div>
+
+    <script src="/HomeScripts.js"></script>
+</body>
+</html>

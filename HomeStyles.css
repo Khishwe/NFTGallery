@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.header, .footer {
+    height: 8vh; /* Reduced height for header and footer */
+    background-color: #333; /* Darker bands for header and footer */
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Adjusted for search container */
+    align-items: center;
+    padding: 0 2vw; /* Padding for better spacing */
+}
+.header {
+    border-bottom: 1px solid #555;
+}
+.footer {
+    border-top: 1px solid #555;
+}
+.image-number-input {
+    min-width: 80px; /* Minimum width for the input field */
+    width: 4vw;
+    padding: 0.5vw;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #555;
+    border-radius: 20px; /* Rounded corners */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for styling */
+}
+.image-number-input:focus {
+    outline: none;
+    border-color: #888;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0 15vw; /* Increased padding to center arrows more */
+}
+.arrow {
+    font-size: calc(1.5vw + 1.5vh); /* Scale font size based on window size */
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+.arrow:hover {
+    transform: scale(1.1);
+}
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.number {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1vh; /* Space between number and iframe box */
+}
+.iframe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Background color for the iframe box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the iframe does not overflow */
+    margin: auto; /* Center the iframe box */
+}
+.iframe-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe border */
+}
