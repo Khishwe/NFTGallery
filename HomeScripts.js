@@ -37,7 +37,6 @@ function add() {
     if (iframeDrop != undefined) {
         iframeDrop.addEventListener("dragleave", dragleave);
         iframeDrop.addEventListener("dragover", dragover);
-        iframeDrop.addEventListener("drop", drop);
 
         iframeDrop.onkeydown = (event) => {
             console.log(event)
@@ -51,7 +50,6 @@ function add() {
     if (iframeDrop != undefined) {
         iframeDrop.addEventListener("dragleave", dragleave);
         iframeDrop.addEventListener("dragover", dragover);
-        iframeDrop.addEventListener("drop", drop);
 
         return;
     }
@@ -64,7 +62,7 @@ function previousContent() {
     }
     selection--;
     
-    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="/scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
+    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
     add()
     document.getElementById("iframe-number").textContent = selection;
     adjustIframeBox()
@@ -76,7 +74,7 @@ function nextContent() {
     }
     selection++;
     
-    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="/scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
+    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
     add()
     document.getElementById("iframe-number").textContent = selection;
     adjustIframeBox()
@@ -86,7 +84,7 @@ window.addEventListener('resize', adjustIframeBox);
 
 window.addEventListener("load", () => {
     
-    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="/scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
+    document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
     add()
     document.getElementById("iframe-number").textContent = selection;
     adjustIframeBox()
@@ -111,7 +109,7 @@ function goToImage() {
     if (!isNaN(parsedInput) && parsedInput >= 0 && parsedInput <= max) {
         selection = parsedInput;
     
-        document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="/scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
+        document.getElementById("iframe-box").innerHTML = `<iframe id="iframe" src="scripts/${selection}.html" onload="adjustIframeBox()"></iframe>`
         add()
         document.getElementById("iframe-number").textContent = selection;
         adjustIframeBox()
