@@ -7,7 +7,7 @@
 */
 
 // EDIT
-const collectionJsonUrl = '/collection.json';//'/content/<deploy inscription id>';
+const collectionJsonUrl = 'collection.json';//'/content/<deploy inscription id>';
 const imageRendering = 'auto' // or pixelated
 const renderSize = { width: 3508, height: 3508 }; // select image render size
 
@@ -98,7 +98,7 @@ async function createInscriptionHtml() {
         
         for(let i in selectedTraitIndexes) {
         	let v = selectedTraitIndexes[i];
-            traits.push("/traits/" + (v != -1 ? conf.categories[i].traits[v].id : "empty.png"));
+            traits.push("../traits/" + (v != -1 ? conf.categories[i].traits[v].id : "empty.png"));
         }
         
         let selectedTraitOrders = [];
